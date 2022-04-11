@@ -25,7 +25,7 @@ while True:
     if(item=="q"):
         break
     else:
-        set_lunch= set_lunch-set([item])
+        set_lunch= set_lunch-set([item]) #최종
 
 print(set_lunch, "중에서 선택합니다.")
 print("5")
@@ -39,6 +39,6 @@ time.sleep(1)
 print("1")
 time.sleep(1)
 
-print(random.choice(list(set_lunch)))#리스트의 형태로 변환된다.
+print(random.choice(list(set_lunch)))#리스트의 형태로 변환된다. 집합으로 랜덤을 뽑을 수 없기에
 
 

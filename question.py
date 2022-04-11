@@ -19,7 +19,7 @@ for i in total_dictionary:
 print(total_dictionary)'''
 
 #두번째 방법
-total_list = [] # 리스트로 
+total_list = [] # 리스트로
 
 while True:
     question = input("질문을 입력해주세요 : ")
