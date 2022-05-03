@@ -24,13 +24,21 @@ file.close()
 
 results =soup.findAll("a","news_tit")
 
-print("\t","번호\t","제목")
-for i, result in enumerate(results):
-    print(i,"\t",i+real_page,"\t",result.get_text())
-
 wb = openpyxl.Workbook()
 ws = wb.worksheets[0]
 ws.title="news"
+
+#newsname=[]
+#newsname.append(["","번호","제목"])
+ws.append(["","번호","제목"])
+print("\t","번호\t","제목")
+for i, result in enumerate(results):
+    #newsname.append([i,i+real_page,result.get_text()])
+    ws.append([i,i+real_page,result.get_text()])
+    print(i,"\t",i+real_page,"\t",result.get_text())
+
+
+
 
 filename= "test.xlsx"
 wb.save(filename)
